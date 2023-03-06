@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_EncryptA52_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptA52" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptA52_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptA52Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptA52_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptA52" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptA52_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptA52Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptRailFence_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptRailFence" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptRailFence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptRailFenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptRailDence_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptRailDence" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptRailDence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptRailDenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptXTEA_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptXTEA" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptXTEA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptXTEAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptXTEA_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptXTEA" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptXTEA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptXTEAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptPCBC_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptPCBC" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptPCBC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptPCBCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptPCBC_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPCBC" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptPCBC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPCBCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptA52BMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptA52BMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptA52BMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptA52BMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptA52BMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptA52BMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptA52BMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptA52BMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptRailFenceBMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptRailFenceBMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptRailFenceBMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptRailFenceBMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptRailDenceBMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptRailDenceBMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptRailDenceBMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptRailDenceBMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptPCBCBMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptPCBCBMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptPCBCBMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptPCBCBMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptPCBCBMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPCBCBMP" />
+  </wsdl:message>
+  <wsdl:message name="IService_DecryptPCBCBMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPCBCBMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Md5hash_InputMessage">
+    <wsdl:part name="parameters" element="tns:Md5hash" />
+  </wsdl:message>
+  <wsdl:message name="IService_Md5hash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Md5hashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptParalelization_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptParalelization" />
+  </wsdl:message>
+  <wsdl:message name="IService_EncryptParalelization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptParalelizationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="EncryptA52">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptA52" message="tns:IService_EncryptA52_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptA52Response" message="tns:IService_EncryptA52_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptA52">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptA52" message="tns:IService_DecryptA52_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptA52Response" message="tns:IService_DecryptA52_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptRailFence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptRailFence" message="tns:IService_EncryptRailFence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptRailFenceResponse" message="tns:IService_EncryptRailFence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptRailDence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptRailDence" message="tns:IService_DecryptRailDence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptRailDenceResponse" message="tns:IService_DecryptRailDence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptXTEA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptXTEA" message="tns:IService_EncryptXTEA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptXTEAResponse" message="tns:IService_EncryptXTEA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptXTEA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptXTEA" message="tns:IService_DecryptXTEA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptXTEAResponse" message="tns:IService_DecryptXTEA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPCBC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptPCBC" message="tns:IService_EncryptPCBC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptPCBCResponse" message="tns:IService_EncryptPCBC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPCBC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptPCBC" message="tns:IService_DecryptPCBC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptPCBCResponse" message="tns:IService_DecryptPCBC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptA52BMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptA52BMP" message="tns:IService_EncryptA52BMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptA52BMPResponse" message="tns:IService_EncryptA52BMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptA52BMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptA52BMP" message="tns:IService_DecryptA52BMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptA52BMPResponse" message="tns:IService_DecryptA52BMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptRailFenceBMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptRailFenceBMP" message="tns:IService_EncryptRailFenceBMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptRailFenceBMPResponse" message="tns:IService_EncryptRailFenceBMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptRailDenceBMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptRailDenceBMP" message="tns:IService_DecryptRailDenceBMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptRailDenceBMPResponse" message="tns:IService_DecryptRailDenceBMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPCBCBMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptPCBCBMP" message="tns:IService_EncryptPCBCBMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptPCBCBMPResponse" message="tns:IService_EncryptPCBCBMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPCBCBMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DecryptPCBCBMP" message="tns:IService_DecryptPCBCBMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DecryptPCBCBMPResponse" message="tns:IService_DecryptPCBCBMP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Md5hash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Md5hash" message="tns:IService_Md5hash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/Md5hashResponse" message="tns:IService_Md5hash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptParalelization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EncryptParalelization" message="tns:IService_EncryptParalelization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EncryptParalelizationResponse" message="tns:IService_EncryptParalelization_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IService" type="tns:IService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="EncryptA52">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptA52" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptA52">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptA52" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptRailFence">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptRailFence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptRailDence">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptRailDence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptXTEA">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptXTEA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptXTEA">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptXTEA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPCBC">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptPCBC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPCBC">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptPCBC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptA52BMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptA52BMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptA52BMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptA52BMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptRailFenceBMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptRailFenceBMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptRailDenceBMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptRailDenceBMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPCBCBMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptPCBCBMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPCBCBMP">
+      <soap12:operation soapAction="http://tempuri.org/IService/DecryptPCBCBMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Md5hash">
+      <soap12:operation soapAction="http://tempuri.org/IService/Md5hash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptParalelization">
+      <soap12:operation soapAction="http://tempuri.org/IService/EncryptParalelization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="NetTcpBinding_IService" binding="tns:NetTcpBinding_IService">
+      <soap12:address location="net.tcp://localhost:8090/WcfService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8090/WcfService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-NR3C9A6\korisnik</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

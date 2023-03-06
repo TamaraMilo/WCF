@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EncryptA52">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptA52Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptA52">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptA52Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptRailFence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptRailFenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptRailDence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptRailDenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptXTEA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptXTEAResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptXTEA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptXTEAResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptPCBC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptPCBCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptPCBC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptPCBCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptA52BMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptA52BMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptA52BMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptA52BMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptRailFenceBMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptRailFenceBMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptRailDenceBMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptRailDenceBMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptPCBCBMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptPCBCBMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptPCBCBMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptPCBCBMPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Md5hash">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Md5hashResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Md5hashResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptParalelization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="savePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numberOfThreads" type="xs:int" />
+        <xs:element minOccurs="0" name="rails" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptParalelizationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
